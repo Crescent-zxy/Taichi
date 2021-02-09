@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+}
+
+#html {
+    word-break: break-all;
+}
+
+#div {
+    /* position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px; */
+    position: fixed;
+    top: 15px;
+    right: 50%;
+    margin-right: -100px;
+}
+
+#div::before,
+#div::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+/* 手机显示 */
+@media(max-width: 500px) {
+    #html {
+        height: 50vh;
+        overflow: auto;
+    }
+
+    #wrapper {
+        height: 47vh;
+    }
+
+    #div {
+        position: absolute;
+        top: 60vh;
+        right: 50vw;
+    }
+}
